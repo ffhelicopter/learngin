@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP 实例</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>    
+</head>
+<body>
+<div id="divJsonp"></div>
+<script>
+$.getJSON("http://www.a.com:8080/jsonp?callback=?", function(data) {
+    var html = '<ul>';
+    html += '<li>' + data["foo"] + '</li>';
+    html += '</ul>';
+	
+	$('#divJsonp').html(html); 
+});
+</script>
+</body>
+</html>

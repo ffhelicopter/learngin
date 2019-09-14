@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>简单请求CORS测试</title>   
+</head>
+<body>	
+    <script>
+        var url = 'http://localhost:8080/getuser';
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.send();
+    </script>
+</body>
+</html>

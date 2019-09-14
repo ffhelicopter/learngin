@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>非简单请求CORS测试</title>   
+</head>
+<body>	
+    <script>
+        var url = 'http://localhost:8080/putuser';
+        var xhr = new XMLHttpRequest();
+        xhr.open('PUT', url, true);
+        //xhr.setRequestHeader('X-Custom-Header', 'value');
+        xhr.send();
+    </script>
+	
+	<button onclick="getData()">Click me</button>
+    <script>
+    function getData(){
+    	var url = 'http://localhost:8080/putuser';
+        var xhr = new XMLHttpRequest();
+        xhr.open('PUT', url, true);
+        xhr.send();
+    }
+    </script>
+</body>
+</html>
